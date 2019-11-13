@@ -1,0 +1,231 @@
+/* Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Debug */
+div, section, nav {
+  background: grey;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  height: 135px;
+  border-bottom: 1px solid black;
+}
+
+.logo {
+  width: 16%;
+  height: 100%;
+}
+
+.header-nav {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  height: 100%;
+}
+
+.header-nav a {
+  width: 100%;
+  border: 1px solid #fff;
+}
+
+.search {
+  width: 10%;
+}
+
+/* Latest Articles */
+
+.latest-articles {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.call-attention {
+  position: absolute;
+  top: 30px;
+  left: 47%;
+  background-color: white;
+}
+
+.article-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  min-height: 600px;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+
+/* Latest Posts */
+
+.latest-posts {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post-preview,
+.smashing-members,
+.new-on-tv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  border: 1px solid #fff;
+}
+
+.post-preview {
+  width: 33%;
+}
+
+.smashing-members {
+  width: 66%;
+}
+
+.new-on-tv {
+  width: 100%;
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 180px;
+  border: 1px solid #fff;
+}
+
+.just-released,
+.person-of-week,
+.link-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Just Released */
+
+.just-released {
+  min-height: 980px;
+}
+
+/* Community Links */
+
+.community-links {
+  display:  flex;
+  flex-wrap: wrap;
+}
+
+.person-of-week {
+  width: 100%;
+  min-height: 320px;
+  border: 1px solid #fff;
+}
+
+.link-preview {
+  width: 50%;
+  min-height: 450px;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+
+/* Featured */
+
+.featured {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 400px;
+}
+
+/* Curated Posts */
+
+.curated-posts {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.curated-post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 25%;
+  min-height: 780px;
+  border: 1px solid #fff;
+}
+
+.newsletter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  min-height: 1000px;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 700px;
+}
