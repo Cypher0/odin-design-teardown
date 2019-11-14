@@ -49,9 +49,61 @@ table {
 	border-spacing: 0;
 }
 
+/* Typography */
+
+html {
+  font-family: 'Baloo Bhai', cursive;
+  font-size: 30px;
+}
+
+p {
+  margin: 10px 40px;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 60px;
+}
+
+h2 {
+  margin: 40px 20px;
+  font-size: 45px;
+}
+
+.taglist li {
+  margin: 0 5px;
+  font-size: 20px;
+}
+
 /* Debug */
-div, section, nav {
+div, section, nav , footer {
   background: grey;
+  border: 1px solid #fff;
+}
+
+/* Center Content */
+
+.logo,
+.header-nav a,
+header .search,
+.call-attention,
+.article-preview,
+.taglist,
+.post-preview,
+.smashing-members,
+.new-on-tv,
+.load-more,
+.just-released,
+.person-of-week,
+.link-preview,
+.featured,
+.curated-post,
+.newsletter,
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Header */
@@ -61,7 +113,6 @@ header {
   align-items: stretch;
   width: 100%;
   height: 135px;
-  border-bottom: 1px solid black;
 }
 
 .logo {
@@ -79,11 +130,16 @@ header {
 
 .header-nav a {
   width: 100%;
-  border: 1px solid #fff;
+  text-decoration: none;
+  color: #000;
 }
 
 .search {
   width: 10%;
+}
+
+.search button {
+  font-family: 'Baloo Bhai', cursive;
 }
 
 /* Latest Articles */
@@ -97,18 +153,25 @@ header {
 .call-attention {
   position: absolute;
   top: 30px;
-  left: 47%;
-  background-color: white;
+  left: calc(50% - 100px);
+  width: 200px;
+  text-align: center;
+  background-color: #fff;
 }
 
 .article-preview {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 50%;
   min-height: 600px;
-  border: 1px solid #fff;
   box-sizing: border-box;
+}
+
+.article-preview >* {
+  margin-left: 40px;
+}
+
+.taglist {
+  flex-direction: row;
 }
 
 /* Latest Posts */
@@ -121,47 +184,70 @@ header {
 .post-preview,
 .smashing-members,
 .new-on-tv {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   min-height: 500px;
-  border: 1px solid #fff;
 }
 
 .post-preview {
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 33%;
+}
+
+.post-preview >* {
+  margin-left: 40px;
 }
 
 .smashing-members {
   width: 66%;
 }
 
+.smashing-members >* {
+  width: 50%;
+  text-align: center;
+}
+
 .new-on-tv {
   width: 100%;
 }
 
-.load-more {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  min-height: 180px;
-  border: 1px solid #fff;
+.new-on-tv >* {
+  width: 80%;
+  text-align: center;
 }
 
-.just-released,
-.person-of-week,
-.link-preview {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.load-more {
+  width: 100%;
+  min-height: 180px;
+}
+
+.load-more a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 20px;
+  color: #000;
+  border-bottom: 5px solid #cc0000;
 }
 
 /* Just Released */
 
 .just-released {
+  justify-content: space-around;
+  align-items: center;
   min-height: 980px;
+}
+
+.just-released >* {
+  width: 60%;
+  text-align: center;
+}
+
+.book-cover {
+  width: 300px;
+  height: 500px;
+  background-color: #404040;
 }
 
 /* Community Links */
@@ -172,26 +258,42 @@ header {
 }
 
 .person-of-week {
+  justify-content: center;
+  align-items: flex-start;
   width: 100%;
   min-height: 320px;
-  border: 1px solid #fff;
+}
+
+.person-of-week >* {
+  margin-left: 200px;
 }
 
 .link-preview {
+  justify-content: stretch;
+  align-items: flex-start;
   width: 50%;
   min-height: 450px;
-  border: 1px solid #fff;
   box-sizing: border-box;
+}
+
+.link-preview >* {
+  margin-left: 100px;
+  width: 60%;
 }
 
 /* Featured */
 
 .featured {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   min-height: 400px;
+}
+
+.featured >* {
+  margin-left: 40px;
+  margin-right: 500px;
+  text-align: left;
+
 }
 
 /* Curated Posts */
@@ -203,29 +305,55 @@ header {
 }
 
 .curated-post {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: stretch;
   box-sizing: border-box;
   width: 25%;
   min-height: 780px;
-  border: 1px solid #fff;
+}
+
+.curated-post >* li {
+  margin: 30px 0;
 }
 
 .newsletter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
   width: 90%;
   min-height: 1000px;
+}
+
+.newsletter >* {
+  width: 35%;
+  text-align: center;
+}
+.newsletter button {
+  width: auto;
+  font-family: "Baloo Bhai", cursive;
 }
 
 /* Footer */
 
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
   width: 100%;
   height: 700px;
+}
+
+footer >* {
+  width: 70%;
+  margin: 50px 0;
+  text-align: center;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: none;
+}
+
+.footer-nav a {
+  margin: 10px;
+  text-decoration: none;
+  color: #000;
 }
